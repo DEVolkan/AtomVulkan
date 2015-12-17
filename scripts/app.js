@@ -1,4 +1,4 @@
-var app = angular.module('app',['ngRoute','app.Home', 'app.famous','famous.angular', 'ui.router', 'angular-inview', 'ui.bootstrap'])
+var app = angular.module('app',['ngRoute','app.Home', 'app.famous', 'app.gallery', 'famous.angular', 'ui.router', 'angular-inview', 'ui.bootstrap'])
     .config(function($routeProvider) {
         $routeProvider
             .when('/', {
@@ -8,6 +8,10 @@ var app = angular.module('app',['ngRoute','app.Home', 'app.famous','famous.angul
             .when('/famous', {
                     templateUrl : 'module/famous/view/famousIndex.html',
                     controller  : 'famousController'
+            })
+            .when('/gallery', {
+                    templateUrl : 'module/gallery/view/galleryIndex.html',
+                    controller  : 'galleryController'
             })
             .otherwise('/', {
                     templateUrl : 'module/home/view/index.html',
