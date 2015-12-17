@@ -1,4 +1,4 @@
-var app = angular.module('app',['ngRoute','app.Home', 'app.famous','famous.angular', 'ui.router'])
+var app = angular.module('app',['ngRoute','app.Home', 'app.famous','famous.angular', 'ui.router', 'angular-inview', 'ui.bootstrap'])
     .config(function($routeProvider) {
         $routeProvider
             .when('/', {

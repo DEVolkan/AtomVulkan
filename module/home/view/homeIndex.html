@@ -1,4 +1,124 @@
-hallo
-{{test}}
-ein kleiner weiterer Test
-zweiter test
+<div class="row">
+    <div  class="col-sm-12">
+        <img ng-src="pictures/AtomVulkanTitelOhneFilter.jpg" class="img-responsive" >
+    </div>
+    <div class="col-sm-5 aareon-grau-schrift">
+        <br><br><br>
+        <label class="groeßer">Name: Volkan T. Simsek</label><br>
+        <label class="groeßer">Alter: 21</label><br>
+        <label class="groeßer">Betrieb: Aareon Deutschland GmbH</label><br>
+        <label class="groeßer">Fähigkeiten: Java, C#, HTML, Javascript, XAML und AngularJS</label>
+    </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+ <div style="height: 305px">
+    <uib-carousel interval="myInterval" no-wrap="noWrapSlides">
+      <uib-slide ng-repeat="slide in slides" active="slide.active">
+        <img ng-src="{{slide.image}}" style="margin:auto;">
+        <div class="carousel-caption">
+          <h4>Slide {{$index}}</h4>
+          <p>{{slide.text}}</p>
+        </div>
+      </uib-slide>
+    </uib-carousel>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <button type="button" class="btn btn-info" ng-click="addSlide()">Add Slide</button>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" ng-model="noWrapSlides">
+          Disable Slide Looping
+        </label>
+      </div>
+    </div>
+    <div class="col-md-6">
+      Interval, in milliseconds: <input type="number" class="form-control" ng-model="myInterval">
+      <br />Enter a negative number or 0 to stop the interval.
+    </div>
+  </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div  in-view="objectInView($index, $inview, $inviewpart, $event)">
+    <div ng-if="title === true">
+        <h1 style="z-index: 1000; height: 50%;" class="animated fadeInRightBig ">AtomVulkans Seite</h1>
+    </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
