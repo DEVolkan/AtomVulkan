@@ -1,4 +1,4 @@
-var app = angular.module('app',['ngRoute', 'app.Home', 'app.gallery', 'angular-inview' ])
+var app = angular.module('app',['ngRoute', 'app.Home', 'app.gallery', 'angular-inview', 'ngAnimate' ])
     .config(function($routeProvider) {
         $routeProvider
             .when('/', {
