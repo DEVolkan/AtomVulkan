@@ -1,5 +1,5 @@
-angular.module('app.Home', ['angular-inview', 'ui.bootstrap'])
-.controller('homeController', function($scope, $http, $location) {
+angular.module('app.Home', ['angular-inview'])
+.controller('homeController', function($scope) {
     $scope.test = "hallo1";
     $scope.title = false;
     $scope.objectInView = function (index, inview, inviewpart, event) {
