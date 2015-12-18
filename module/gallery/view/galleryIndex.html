@@ -1,5 +1,59 @@
-<flex-slider flex-slide="s in mySlides">
+<!--<div class="row">
+    <flex-slider class="col-sm-8 slides" flex-slide="s in mySlides">
+        <li>
+            <img  class="img-responsive" ng-src="{{s}}">
+        </li>
+    </flex-slider>
+</div>-->
+<!--<style type="text/css">
+    .flexslider-container {
+        width: 50%;
+        margin: 10px auto;
+    }
+</style>
+
+<flex-slider class="carousel" slide="s in slides" animation="slide" animation-loop="false" item-width="210" item-margin="5">
     <li>
         <img ng-src="{{s}}">
     </li>
+</flex-slider>-->
+
+<!--<style type="text/css">
+    .flexslider-container {
+        width: 50%;
+        margin: 10px auto;
+    }
+</style>
+
+<flex-slider
+    slide="s in slideshow.slides"
+    animation="slide"
+    start="slideshow.start($slider)"
+    before="slideshow.before()"
+    after="slideshow.after()"
+    end="slideshow.end()">
+    <li>
+        <img ng-src="{{s}}">
+    </li>
+</flex-slider>-->
+<style type="text/css">
+    .flexslider-container {
+        width: 50%;
+        margin: 10px auto;
+    }
+</style>
+
+<flex-slider slide="s in slides track by s.id" animation="slide" control-nav="thumbnails">
+    <li ng-switch="s.type" data-thumb="{{s.url}}">
+        <iframe ng-switch-when="video" ng-src="{{s.url}}" width="100%" height="400" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+        <img ng-switch-default ng-src="{{s.url}}">
+    </li>
 </flex-slider>
+
+
+
+<!--<flex-slider slide="s in slides" animation="slide" control-nav="thumbnails">
+    <li data-thumb="{{s}}">
+        <img ng-src="{{s}}">
+    </li>
+</flex-slider>-->
