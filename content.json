@@ -1,7 +1,8 @@
 {
     "standardwert": "test123",
-    "youtube": [{
+    "SocialMedia": [{
             "title": "Schöne neue Welt | Robo-Buttler hat uns vermisst | mit AtomVulkan",
+            "platform": "youtube",
             "type": "video",
             "datum": "10.11.2015",
             "uhrzeit": "16:26",
@@ -11,6 +12,7 @@
             "bitly": ""
         }, {
             "title": "Kochen lernen | Bau Menü endeckt und geheimer Save mit AtomVulkan",
+            "platform": "youtube",
             "type": "video",
             "datum": "11.11.2015 ",
             "uhrzeit": "18:38",
@@ -18,9 +20,9 @@
             "source": "https://www.youtube.com/watch?v=4HxpqfxEL7U",
             "description": "",
             "bitly": ""
-        }],
-    "facebook": [{
+        }, {
             "title": "Vom Regen in die Traufe",
+            "platform": "facebook",
             "type": "blog",
             "id": "a.466524546860076.1073741828.466512213527976/483566361822561",
             "source": "/pictures/pic1.jpg",
@@ -28,6 +30,7 @@
             "bitly": ""
         }, {
             "title": "Fallout 4 - 7 Sachen die uns jetzt schon stören",
+            "platform": "facebook",
             "type": "post",
             "id": "a.466524546860076.1073741828.466512213527976/476903255822205",
             "source": "https://www.facebook.com/AtomVulkan/photos/a.466524546860076.1073741828.466512213527976/476903255822205/?type=3&permPage=1",
@@ -35,6 +38,7 @@
             "bitly": ""
         }, {
             "title": "Neues Titelbild",
+            "platform": "facebook",
             "type": "picture",
             "id": "a.466519086860622.1073741827.466512213527976/485878604924670",
             "source": "https://www.facebook.com/AtomVulkan/photos/a.466519086860622.1073741827.466512213527976/485878604924670/?type=3&permPage=1",
