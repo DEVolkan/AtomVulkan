@@ -1,7 +1,9 @@
-angular.module('app.gallery', ['angular-inview', 'ngAnimate', 'angular-flexslider'])
+(function (angular) {
+    angular.module('gallery')
+            .controller('galleryController', galleryController);
 
-        .controller('galleryController', function ($scope, $sce) {
-            $scope.test = "hallo1";
-            
-
-        });
+    galleryController.$inject = ['$scope', '$sce', '$q'];
+    function galleryController($scope, $sce) {
+        $scope.test = "hallo1";
+    };
+})(angular);
