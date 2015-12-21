@@ -14,5 +14,5 @@ var app = angular.module('app', ['ngRoute', 'app.Home', 'app.gallery', 'angular-
                         templateUrl: 'module/home/view/index.html',
                         controller: 'homeController'
                     });
-        });
+        })
     
