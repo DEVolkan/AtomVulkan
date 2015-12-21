@@ -1,4 +1,5 @@
-angular.module('app.gallery', ['angular-inview', 'ngAnimate', 'angular-flexslider'])
+angular.module('app.gallery', ['angular-inview', 'ngAnimate', 'angular-flexslider', 'ngFacebook'])
+
         .controller('galleryController', function ($scope, $sce) {
             $scope.test = "hallo1";
             $scope.slides = [
