@@ -9,7 +9,8 @@
         $scope.title = false;
 
         $scope.showAllSocialMediaInfos = function () {
-            console.log(service.SocialMediaInfos);
+//            console.log(service.SocialMediaInfos);
+            service.CreateCarousel();
         }
 
         $scope.objectInView = function (index, inview, inviewpart, event) {

@@ -3,6 +3,7 @@
             .factory('service', function ($http, $q, $filter) {
                 var service = {
                     loadData: loadData,
+                    CreateCarousel: CreateCarousel,
                     SocialMediaInfos: [],
                 };
 
@@ -16,6 +17,13 @@
                     });
                     return deferred.promise;
                 }
+                
+                function CreateCarousel(){
+                    var carousel = service.SocialMediaInfos;
+                    carousel.SocialMedia.forEach(function (item) {
+                        console.log(item);
+                    });
+                };
                 return service;
             });
 })(angular);
