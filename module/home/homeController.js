@@ -2,11 +2,14 @@
     angular.module('Home')
             .controller('homeController', homeController);
 
-    homeController.$inject = ['$scope', '$sce', '$q'];
-    function homeController($scope, $sce, $http, $q) {
+    homeController.$inject = ['$scope', 'service', '$sce', '$q'];
+    function homeController($scope, service, $sce, $q) {
         $scope.test = "hallo1";
         $scope.title = false;
-        $scope.SocialMediaInfos;
+        
+        $scope.showAllSocialMediaInfos = function () {
+            console.log(service.SocialMediaInfos);
+        }
 
         $scope.objectInView = function (index, inview, inviewpart, event) {
             if (inview === true) {
@@ -18,9 +21,7 @@
             }
         }
 
-        $scope.showAllSocialMediaInfos = function () {
-            console.log($scope.SocialMediaInfos);
-        }
+        
 
         $scope.slides = [
             {id: 1, type: 'video', url: $sce.trustAsResourceUrl('https://www.youtube.com/embed/ktQqoXa7sc4')},
@@ -30,16 +31,7 @@
             {id: 5, type: 'image', url: 'http://flexslider.woothemes.com/images/kitchen_adventurer_donut.jpg'},
         ];
 
-        $scope.test = function () {
-            var defer = $q.defer();
-            $http.get("content.json").success(function (data) {
-                $scope.SocialMediaInfos = data;
-                defer.resolve(data);
-            }).error(function (data) {
-                defer.reject(data);
-            });
-            return defer.promise;
-        }
+        
     }
     ;
 })(angular);
