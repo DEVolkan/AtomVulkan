@@ -9,7 +9,7 @@
         $scope.title = false;
 
         $scope.showAllSocialMediaInfos = function () {
-            service.GroupBy(service.SocialMediaInfos, "datum");
+            service.CreateCarousel();
         }
 
         $scope.objectInView = function (index, inview, inviewpart, event) {

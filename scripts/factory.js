@@ -18,16 +18,17 @@
                     return deferred.promise;
                 }
 
-                service.OrderBy = function (theArray, sortItem) {
-                    console.log(alasql('SELECT * FROM ? ORDER BY '+ sortItem +' DESC', [theArray.SocialMedia]));
+                service.OrderBy = function (arrayToSort, sortItem, secondSortItem) {
+                    if (secondSortItem !== null) {
+                        arrayToSort = alasql('SELECT * FROM ? ORDER BY ' + sortItem + ' DESC,'+ secondSortItem +' DESC', [arrayToSort.SocialMedia]);
+                    } else {
+                        arrayToSort = alasql('SELECT * FROM ? ORDER BY ' + sortItem + ' DESC', [arrayToSort.SocialMedia]);
+                    }
+                    return arrayToSort;
                 };
 
                 function CreateCarousel() {
-
-//                    var carousel = service.SocialMediaInfos;
-//                    carousel.SocialMedia.forEach(function (item) {
-//                        console.log(item);
-//                    });
+                    console.log(service.OrderBy(service.SocialMediaInfos, "datum", "uhrzeit"));
                 }
                 ;
                 return service;
