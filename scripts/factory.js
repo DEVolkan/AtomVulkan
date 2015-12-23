@@ -1,6 +1,6 @@
 (function (angular) {
     angular.module('app')
-            .factory('service', function ($http, $q, $filter) {
+            .factory('service', function ($http, $q, $filter, $sce) {
                 var service = {
                     loadData: loadData,
                     CreateCarousel: CreateCarousel,
@@ -20,7 +20,7 @@
 
                 service.OrderBy = function (arrayToSort, sortItem, secondSortItem) {
                     if (secondSortItem !== null) {
-                        arrayToSort = alasql('SELECT * FROM ? ORDER BY ' + sortItem + ' DESC,'+ secondSortItem +' DESC', [arrayToSort.SocialMedia]);
+                        arrayToSort = alasql('SELECT * FROM ? ORDER BY ' + sortItem + ' DESC,' + secondSortItem + ' DESC', [arrayToSort.SocialMedia]);
                     } else {
                         arrayToSort = alasql('SELECT * FROM ? ORDER BY ' + sortItem + ' DESC', [arrayToSort.SocialMedia]);
                     }
@@ -28,7 +28,15 @@
                 };
 
                 function CreateCarousel() {
-                    console.log(service.OrderBy(service.SocialMediaInfos, "datum", "uhrzeit"));
+                    var zwischenArray = alasql('SELECT TOP 5 * FROM ?', [service.OrderBy(service.SocialMediaInfos, "datum", "uhrzeit")]);
+                    var returnArray = [];
+                    zwischenArray.forEach(function (item) {
+                        if(item.type === "video"){
+                            item.id = $sce.trustAsResourceUrl(item.id);
+                        }
+                        returnArray.push(item);
+                    });
+                    return returnArray;
                 }
                 ;
                 return service;

@@ -7,10 +7,7 @@
     function homeController($scope, service, $sce, $q) {
         $scope.test = "hallo1";
         $scope.title = false;
-
-        $scope.showAllSocialMediaInfos = function () {
-            service.CreateCarousel();
-        }
+        $scope.carousel = service.CreateCarousel();
 
         $scope.objectInView = function (index, inview, inviewpart, event) {
             if (inview === true) {
@@ -20,6 +17,10 @@
                 console.log("false")
                 $scope.title = false;
             }
+        }
+        
+        $scope.showAllSocialMediaInfos = function (){
+            console.log(service.CreateCarousel());
         }
 
         $scope.slides = [

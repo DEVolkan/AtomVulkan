@@ -5,12 +5,13 @@
         margin: 10px auto;
     }
 </style>
-    <flex-slider  slide="s in slides track by s.id" animation="slide" >
-    <li ng-switch="s.type" data-thumb="{{s.url}}">
-        <iframe style="margin-top: 120px" ng-switch-when="video" ng-src="{{s.url}}" width="100%" height="400" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-        <img  ng-switch-default ng-src="{{s.url}}">
+<flex-slider slide="s in carousel track by s.id" animation="slide" >
+    <li style="height: 500px" ng-switch="s.type" data-thumb="{{s.source}}">
+        <iframe ng-switch-when="video" ng-src="{{s.id}}" width="100%" height="400" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+        <img  ng-switch-default ng-src="{{s.source}}">
     </li>
 </flex-slider>
+
 
 <button ng-click="showAllSocialMediaInfos()">Give all Infos</button>
 <br>
