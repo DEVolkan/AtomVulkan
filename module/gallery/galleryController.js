@@ -2,10 +2,10 @@
     angular.module('gallery')
             .controller('galleryController', galleryController);
 
-    galleryController.$inject = ['$scope', '$sce', '$q'];
-    function galleryController($scope, $sce) {
+    galleryController.$inject = ['$scope'];
+    function galleryController($scope) {
         $scope.test = "hallo1";
-
+//        alasql('CREATE TABLE one (two INT)');
         $scope.MyData = [{income: 1000}, {income: 2000},
             {income: 1200}, {income: 4500},
             {income: 3300}, {income: 200},
