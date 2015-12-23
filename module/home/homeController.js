@@ -9,7 +9,7 @@
         $scope.title = false;
 
         $scope.showAllSocialMediaInfos = function () {
-            console.log(service.GroupBy(service.SocialMediaInfos, "datum"));
+            service.GroupBy(service.SocialMediaInfos, "datum");
         }
 
         $scope.objectInView = function (index, inview, inviewpart, event) {

@@ -18,17 +18,8 @@
                     return deferred.promise;
                 }
 
-                service.GroupBy = function (theArray, sortItem) {
-                    
-//                    console.log(theArray.SocialMedia);
-//                    console.log(theArray.SocialMedia);
-//                    return theArray.SocialMedia.sort(function(a, b){return b-a});
-//                    var points = [40, 100, 1, 5, 25, 10];
-//                    console.log(points);
-//                    points.sort(function (a, b) {
-//                        return b - a
-//                    });
-//                    console.log(points);
+                service.OrderBy = function (theArray, sortItem) {
+                    console.log(alasql('SELECT * FROM ? ORDER BY '+ sortItem +' DESC', [theArray.SocialMedia]));
                 };
 
                 function CreateCarousel() {
