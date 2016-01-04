@@ -1,6 +1,17 @@
 (function (angular) {
     angular.module('app')
-            .factory('service', function ($http, $q, $filter, $sce) {
+            .directive('clickLink', ['$location', '$window', function ($location, $window) {
+                    return {
+                        link: function (scope, element, attrs) {
+                            element.on('click', function () {
+                                scope.$apply(function () {
+                                    $window.open(attrs.clickLink, '_blank');
+                                });
+                            });
+                        }
+                    }
+                }])
+            .factory('service', function ($http, $q, $sce) {
                 var service = {
                     loadData: loadData,
                     CreateCarousel: CreateCarousel,
@@ -31,7 +42,7 @@
                     var zwischenArray = alasql('SELECT TOP 5 * FROM ?', [service.OrderBy(service.SocialMediaInfos, "datum", "uhrzeit")]);
                     var returnArray = [];
                     zwischenArray.forEach(function (item) {
-                        if(item.type === "video"){
+                        if (item.type === "video") {
                             item.id = $sce.trustAsResourceUrl(item.id);
                         }
                         returnArray.push(item);

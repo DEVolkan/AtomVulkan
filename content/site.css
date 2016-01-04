@@ -73,8 +73,8 @@
     color: #646D86;
 }
 
-.aareon-btn:hover{
-    background-color: #3071A9;
+.atomVulkan-btn:hover{
+    background-color: #5faeb6;
     color: white;
 }
 
@@ -167,6 +167,7 @@
 }
 .transparent {
     background-color: transparent;
+    border: 0px;
 }
 
 .delaySlow {
