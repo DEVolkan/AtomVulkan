@@ -6,21 +6,22 @@
     }
 </style>
 <div class="row" >
-    <div class="col-lg-12" style="background-color: #3f6184;" >
+    <div class="col-md-offset-5" in-view="objectInView($index, $inview, $inviewpart, $event)">
+        <div  ng-if="title === true">
+            <h1 style="text-align: center " class="animated fadeInRightBig overlay">AtomVulkans Seite</h1>
+        </div>
+    </div>
+    <div class="col-md-12" style="background-color: #3f6184;" >
         <flex-slider slide="s in carousel track by s.id " animation="slide" >
-            <li  background-color: #54a0e5;" ng-switch="s.type" data-thumb="{{s.source}}">
-                 <iframe style="margin-top: 6%;" ng-switch-when="video" ng-src="{{s.id}}" width="100%" height="400" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-                <img style="height: 500px;" class="img-responsive" ng-switch-default ng-src="{{s.source}}">
+            <li ng-switch="s.type" data-thumb="{{s.source}}">
+                <div  class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" style="margin-top: 6%;" ng-switch-when="video" ng-src="{{s.id}}" width="100%" height="400" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+                    <img class="embed-responsive-item" ng-switch-default ng-src="{{s.source}}">
+                </div>
             </li>
         </flex-slider>
     </div>
 </div>
-
-
-
-
-<button ng-click="showAllSocialMediaInfos()">Give all Infos</button>
-
 <br>
 <br>
 <br>
