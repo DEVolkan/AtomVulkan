@@ -1,6 +1,6 @@
 (function (angular) {
     angular.module('app')
-            .directive('clickLink', ['$location', '$window', function ($location, $window) {
+            .directive('clickLink', ['$window', function ($window) {
                     return {
                         link: function (scope, element, attrs) {
                             element.on('click', function () {

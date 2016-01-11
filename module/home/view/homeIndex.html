@@ -5,17 +5,14 @@
         margin: 10px auto;
     }
 </style>
-<div class="row" >
-    <div class="col-md-offset-5" in-view="objectInView($index, $inview, $inviewpart, $event)">
-        <div  ng-if="title === true">
-            <h1 style="text-align: center " class="animated fadeInRightBig overlay">AtomVulkans Seite</h1>
-        </div>
-    </div>
+
+<div class="row element" >
+
     <div class="col-md-12" style="background-color: #3f6184;" >
         <flex-slider slide="s in carousel track by s.id " animation="slide" >
             <li ng-switch="s.type" data-thumb="{{s.source}}">
                 <div  class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" style="margin-top: 6%;" ng-switch-when="video" ng-src="{{s.id}}" width="100%" height="400" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+                    <iframe class="embed-responsive-item" ng-switch-when="video" ng-src="{{s.id}}" width="100%" height="400" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
                     <img class="embed-responsive-item" ng-switch-default ng-src="{{s.source}}">
                 </div>
             </li>
@@ -30,6 +27,11 @@
 <br>
 <br>
 <br>
+<div class="center-block" in-view="objectInView($index, $inview, $inviewpart, $event)">
+    <div  ng-if="title === true">
+        <h1 style="text-align: center " class="animated fadeInRightBig overlay">AtomVulkans Seite</h1>
+    </div>
+</div>
 <br>
 <br>
 <br>
